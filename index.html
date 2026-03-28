@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-<title>GYM PRO ELITE | Gestão Profissional de Academia</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+<title>GYM PRO ELITE | Sistema Profissional de Gestão de Academia</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -16,29 +16,20 @@
 }
 
 body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background: linear-gradient(135deg, #0a0f2a 0%, #1a1a3a 50%, #0f0c29 100%);
+    font-family: 'Inter', system-ui, sans-serif;
+    background: linear-gradient(135deg, #0a0f2a 0%, #0f0c29 50%, #1a1a3a 100%);
     color: #ffffff;
     min-height: 100vh;
     padding-bottom: 80px;
     overflow-x: hidden;
 }
 
-/* Glassmorphism Effect */
-.glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Header */
 header {
-    background: rgba(10, 15, 42, 0.8);
+    background: rgba(10, 15, 42, 0.95);
     backdrop-filter: blur(20px);
-    padding: 20px;
+    padding: 16px;
     text-align: center;
-    border-bottom: 1px solid rgba(0, 255, 136, 0.3);
+    border-bottom: 2px solid #00ff88;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -49,58 +40,45 @@ header {
     align-items: center;
     justify-content: center;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
 .logo i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #00ff88;
-    filter: drop-shadow(0 0 8px rgba(0,255,136,0.5));
 }
 
 .logo h1 {
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 800;
     background: linear-gradient(135deg, #fff, #00ff88);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
-.logo span {
-    font-size: 0.8rem;
-    background: rgba(0,255,136,0.2);
-    padding: 2px 8px;
-    border-radius: 20px;
-    margin-left: 8px;
-}
-
-/* Container */
 .container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 16px;
 }
 
-/* Cards */
 .card {
-    background: rgba(15, 25, 45, 0.7);
+    background: rgba(15, 25, 45, 0.75);
     backdrop-filter: blur(10px);
     border-radius: 28px;
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid rgba(0, 255, 136, 0.15);
+    border: 1px solid rgba(0, 255, 136, 0.2);
     transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(0, 255, 136, 0.4);
-    box-shadow: 0 12px 40px rgba(0, 255, 136, 0.15);
+    border-color: rgba(0, 255, 136, 0.5);
+    transform: translateY(-2px);
 }
 
 .card h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     margin-bottom: 18px;
     display: flex;
     align-items: center;
@@ -110,22 +88,16 @@ header {
     padding-left: 12px;
 }
 
-.card h3 i {
-    font-size: 1.2rem;
-}
-
-/* Form Elements */
 input, select, textarea {
     width: 100%;
-    padding: 14px 16px;
+    padding: 12px 16px;
     margin: 8px 0;
-    background: rgba(10, 15, 35, 0.8);
+    background: rgba(10, 15, 35, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 20px;
     color: #fff;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: all 0.2s;
-    font-family: inherit;
 }
 
 input:focus, select:focus {
@@ -136,43 +108,37 @@ input:focus, select:focus {
 
 button {
     width: 100%;
-    padding: 14px;
+    padding: 12px;
     margin: 8px 0;
     background: linear-gradient(135deg, #00ff88, #00cc6a);
     border: none;
     border-radius: 20px;
     color: #0a0f2a;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.95rem;
     cursor: pointer;
     transition: all 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    font-family: inherit;
+    gap: 8px;
 }
 
 button:active {
     transform: scale(0.97);
 }
 
-button i {
-    font-size: 1rem;
-}
-
-/* Navigation */
 .nav-bar {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     background: rgba(10, 15, 42, 0.95);
     backdrop-filter: blur(20px);
     display: flex;
-    border-top: 1px solid rgba(0, 255, 136, 0.2);
+    border-top: 1px solid rgba(0, 255, 136, 0.3);
     border-radius: 30px 30px 0 0;
     z-index: 200;
 }
@@ -182,20 +148,15 @@ button i {
     background: transparent;
     margin: 0;
     border-radius: 0;
-    padding: 12px 0;
+    padding: 10px 0;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
     color: #888;
-    transition: all 0.2s;
+    font-size: 0.75rem;
 }
 
 .nav-item i {
-    font-size: 1.3rem;
-    margin: 0;
-}
-
-.nav-item span {
-    font-size: 0.7rem;
+    font-size: 1.2rem;
 }
 
 .nav-item.active {
@@ -204,50 +165,15 @@ button i {
     border-top: 2px solid #00ff88;
 }
 
-/* Alert Cards */
-.alert-card {
-    background: linear-gradient(135deg, rgba(239, 68, 68, 0.9), rgba(220, 38, 38, 0.9));
-    backdrop-filter: blur(8px);
-    padding: 14px;
-    border-radius: 20px;
-    margin: 12px 0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    animation: slideIn 0.3s ease;
-}
-
-.alert-warning {
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.9), rgba(234, 88, 12, 0.9));
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* List Items */
 .list-item {
-    background: rgba(10, 15, 35, 0.6);
+    background: rgba(10, 15, 35, 0.7);
     margin: 10px 0;
-    padding: 14px 16px;
-    border-radius: 20px;
+    padding: 12px;
+    border-radius: 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.2s;
     border-left: 3px solid #00ff88;
-}
-
-.list-item:hover {
-    background: rgba(0, 255, 136, 0.1);
-    transform: translateX(4px);
 }
 
 .item-info {
@@ -256,34 +182,32 @@ button i {
 
 .item-name {
     font-weight: 600;
-    font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
-.item-detail {
-    font-size: 0.75rem;
-    opacity: 0.7;
-    margin-top: 4px;
+.status-badge {
+    font-size: 0.7rem;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: 600;
 }
+
+.status-ativo { background: #00ff88; color: #0a0f2a; }
+.status-inativo { background: #ef4444; color: white; }
+.status-inadimplente { background: #f97316; color: white; }
 
 .delete-btn {
     background: rgba(239, 68, 68, 0.2);
-    padding: 8px 14px;
+    padding: 6px 12px;
     width: auto;
     margin: 0;
     border-radius: 30px;
     color: #ef4444;
-    font-size: 0.8rem;
 }
 
-.delete-btn:hover {
-    background: #ef4444;
-    color: white;
-}
-
-/* Stats Grid */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -293,71 +217,15 @@ button i {
 
 .stat-card {
     background: rgba(0, 255, 136, 0.1);
-    border-radius: 20px;
-    padding: 14px;
+    border-radius: 18px;
+    padding: 12px;
     text-align: center;
-    border: 1px solid rgba(0, 255, 136, 0.2);
 }
 
 .stat-value {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: #00ff88;
-}
-
-.stat-label {
-    font-size: 0.75rem;
-    opacity: 0.8;
-    margin-top: 4px;
-}
-
-/* Charts */
-canvas {
-    max-height: 250px;
-    margin-top: 16px;
-    background: rgba(10, 15, 35, 0.5);
-    border-radius: 20px;
-    padding: 10px;
-}
-
-/* Empty State */
-.empty-state {
-    text-align: center;
-    padding: 40px 20px;
-    opacity: 0.6;
-}
-
-.empty-state i {
-    font-size: 3rem;
-    margin-bottom: 12px;
-    color: #00ff88;
-}
-
-/* Result Card */
-.result-card {
-    background: linear-gradient(135deg, #00ff88, #00cc6a);
-    padding: 14px;
-    border-radius: 20px;
-    margin-top: 16px;
-    text-align: center;
-    font-weight: 600;
-    color: #0a0f2a;
-}
-
-/* Badge */
-.badge {
-    background: #00ff88;
-    color: #0a0f2a;
-    padding: 2px 10px;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    margin-left: 8px;
-}
-
-/* Utility */
-.hidden {
-    display: none;
 }
 
 .section {
@@ -373,6 +241,72 @@ canvas {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+.alert-card {
+    background: linear-gradient(135deg, rgba(239,68,68,0.9), rgba(220,38,38,0.9));
+    padding: 12px;
+    border-radius: 18px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, rgba(249,115,22,0.9), rgba(234,88,12,0.9));
+}
+
+.checkin-btn {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    margin: 0;
+    padding: 6px 12px;
+    width: auto;
+}
+
+canvas {
+    max-height: 220px;
+    margin-top: 12px;
+    background: rgba(10,15,35,0.5);
+    border-radius: 16px;
+    padding: 8px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 30px 20px;
+    opacity: 0.6;
+}
+
+.result-card {
+    background: linear-gradient(135deg, #00ff88, #00cc6a);
+    padding: 12px;
+    border-radius: 18px;
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #0a0f2a;
+}
+
+.financial-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.tip-card {
+    background: rgba(0,255,136,0.1);
+    border-left: 3px solid #00ff88;
+    padding: 12px;
+    border-radius: 14px;
+    margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .card { padding: 16px; }
+}
 </style>
 </head>
 <body>
@@ -380,48 +314,44 @@ canvas {
 <header>
     <div class="logo">
         <i class="fas fa-dumbbell"></i>
-        <h1>GYM PRO ELITE <span>v2.0</span></h1>
+        <h1>GYM PRO ELITE</h1>
+        <i class="fas fa-shield-alt" style="color:#00ff88"></i>
     </div>
 </header>
 
 <div class="container">
-    <!-- SECTION HOME / DASHBOARD -->
+    <!-- DASHBOARD -->
     <div id="homeSection" class="section active">
         <div id="alertContainer"></div>
         <div class="card">
             <h3><i class="fas fa-chart-line"></i> Dashboard</h3>
             <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-value" id="totalAlunos">0</div>
-                    <div class="stat-label">Alunos Ativos</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="totalTreinos">0</div>
-                    <div class="stat-label">Treinos</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="totalMetricas">0</div>
-                    <div class="stat-label">Avaliações</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="mediaIMC">0</div>
-                    <div class="stat-label">IMC Médio</div>
-                </div>
+                <div class="stat-card"><div class="stat-value" id="totalAlunos">0</div><div>Alunos</div></div>
+                <div class="stat-card"><div class="stat-value" id="alunosAtivos">0</div><div>Ativos</div></div>
+                <div class="stat-card"><div class="stat-value" id="inadimplentes">0</div><div>Inadimplentes</div></div>
+                <div class="stat-card"><div class="stat-value" id="receitaMes">R$ 0</div><div>Receita Mês</div></div>
             </div>
-            <canvas id="chartAlunosMes"></canvas>
-            <canvas id="chartTreinosDist" style="margin-top: 20px;"></canvas>
+            <canvas id="chartCheckins"></canvas>
+            <canvas id="chartPlanos" style="margin-top: 15px;"></canvas>
         </div>
     </div>
 
-    <!-- SECTION ALUNOS -->
+    <!-- ALUNOS -->
     <div id="alunosSection" class="section">
         <div class="card">
             <h3><i class="fas fa-user-plus"></i> Novo Aluno</h3>
-            <input type="text" id="nomeAluno" placeholder="Nome completo" autocomplete="off">
+            <input type="text" id="nomeAluno" placeholder="Nome completo">
+            <input type="text" id="cpfAluno" placeholder="CPF (apenas números)" maxlength="11">
+            <input type="text" id="contatoAluno" placeholder="Telefone/Email">
             <select id="planoAluno">
-                <option value="30">📆 Mensal (30 dias)</option>
-                <option value="90">📅 Trimestral (90 dias)</option>
-                <option value="365">⭐ Anual (365 dias)</option>
+                <option value="30">📆 Mensal (30 dias - R$ 120)</option>
+                <option value="90">📅 Trimestral (90 dias - R$ 320)</option>
+                <option value="365">⭐ Anual (365 dias - R$ 1.200)</option>
+            </select>
+            <select id="pagamentoTipo">
+                <option value="dinheiro">💵 Dinheiro</option>
+                <option value="cartao">💳 Cartão</option>
+                <option value="pix">📱 Pix</option>
             </select>
             <button onclick="cadastrarAluno()"><i class="fas fa-save"></i> Cadastrar Aluno</button>
         </div>
@@ -431,17 +361,31 @@ canvas {
         </div>
     </div>
 
-    <!-- SECTION TREINOS A/B/C -->
+    <!-- CHECK-IN / ACESSO -->
+    <div id="checkinSection" class="section">
+        <div class="card">
+            <h3><i class="fas fa-fingerprint"></i> Check-in / Acesso</h3>
+            <select id="selectCheckinAluno"></select>
+            <button onclick="realizarCheckin()"><i class="fas fa-check-circle"></i> Registrar Entrada</button>
+            <div id="ultimosCheckins"></div>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-chart-bar"></i> Frequência do Dia</h3>
+            <div id="frequenciaHoje" class="result-card"></div>
+        </div>
+    </div>
+
+    <!-- TREINOS -->
     <div id="treinosSection" class="section">
         <div class="card">
-            <h3><i class="fas fa-clipboard-list"></i> Ficha de Treino</h3>
+            <h3><i class="fas fa-clipboard-list"></i> Ficha de Treino (A/B/C)</h3>
             <select id="selectAlunoTreino"></select>
             <select id="tipoTreino">
                 <option value="A">🔥 TREINO A (Superior)</option>
                 <option value="B">💪 TREINO B (Inferior)</option>
                 <option value="C">⚡ TREINO C (Full Body)</option>
             </select>
-            <input type="text" id="descTreino" placeholder="Ex: Supino, Rosca, Tríceps, Agachamento...">
+            <input type="text" id="descTreino" placeholder="Ex: Supino, Rosca, Tríceps">
             <button onclick="salvarTreino()"><i class="fas fa-dumbbell"></i> Atribuir Treino</button>
         </div>
         <div class="card">
@@ -450,20 +394,52 @@ canvas {
         </div>
     </div>
 
-    <!-- SECTION MÉTRICAS -->
+    <!-- AVALIAÇÕES -->
     <div id="metricasSection" class="section">
         <div class="card">
             <h3><i class="fas fa-heartbeat"></i> Avaliação Física</h3>
             <select id="selectAlunoMetrica"></select>
             <input type="number" id="pesoAluno" step="0.1" placeholder="Peso (kg)">
             <input type="number" id="alturaAluno" step="0.01" placeholder="Altura (m)">
-            <input type="number" id="gorduraAluno" step="0.1" placeholder="% Gordura (opcional)">
-            <button onclick="salvarMetrica()"><i class="fas fa-chart-line"></i> Salvar Métrica</button>
+            <input type="number" id="gorduraAluno" step="0.1" placeholder="% Gordura">
+            <button onclick="salvarMetrica()"><i class="fas fa-chart-line"></i> Salvar Avaliação</button>
         </div>
         <div class="card">
-            <h3><i class="fas fa-chart-line"></i> Evolução do Peso</h3>
+            <h3><i class="fas fa-chart-line"></i> Evolução</h3>
             <canvas id="graficoEvolucao"></canvas>
             <div id="imcInfo" class="result-card"></div>
+        </div>
+    </div>
+
+    <!-- FINANCEIRO -->
+    <div id="financeiroSection" class="section">
+        <div class="card">
+            <h3><i class="fas fa-chart-simple"></i> Relatório Financeiro</h3>
+            <div id="relatorioFinanceiro"></div>
+            <button onclick="gerarRelatorioFinanceiro()"><i class="fas fa-chart-line"></i> Atualizar Relatório</button>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-history"></i> Histórico de Pagamentos</h3>
+            <div id="historicoPagamentos"></div>
+        </div>
+    </div>
+
+    <!-- PROFISSIONAL -->
+    <div id="profissionalSection" class="section">
+        <div class="card">
+            <h3><i class="fas fa-user-md"></i> Responsável Técnico (CREF)</h3>
+            <input type="text" id="profissionalNome" placeholder="Nome do Profissional">
+            <input type="text" id="profissionalCref" placeholder="Número do CREF">
+            <button onclick="salvarProfissional()"><i class="fas fa-save"></i> Registrar Responsável</button>
+            <div id="infoProfissional" class="tip-card" style="margin-top: 15px;"></div>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-shield-alt"></i> Regras de Negócio</h3>
+            <div class="tip-card">✅ Aluno só acessa com plano ativo</div>
+            <div class="tip-card">✅ CPF único por aluno</div>
+            <div class="tip-card">✅ Bloqueio automático após vencimento</div>
+            <div class="tip-card">✅ Check-in diário registrado</div>
+            <div class="tip-card">✅ Apenas profissionais CREF podem prescrever treinos</div>
         </div>
     </div>
 </div>
@@ -471,88 +447,159 @@ canvas {
 <div class="nav-bar">
     <button class="nav-item active" onclick="mudarTela('home')" data-tela="home"><i class="fas fa-home"></i><span>Início</span></button>
     <button class="nav-item" onclick="mudarTela('alunos')" data-tela="alunos"><i class="fas fa-users"></i><span>Alunos</span></button>
+    <button class="nav-item" onclick="mudarTela('checkin')" data-tela="checkin"><i class="fas fa-fingerprint"></i><span>Check-in</span></button>
     <button class="nav-item" onclick="mudarTela('treinos')" data-tela="treinos"><i class="fas fa-dumbbell"></i><span>Treinos</span></button>
-    <button class="nav-item" onclick="mudarTela('metricas')" data-tela="metricas"><i class="fas fa-chart-simple"></i><span>Métricas</span></button>
+    <button class="nav-item" onclick="mudarTela('metricas')" data-tela="metricas"><i class="fas fa-chart-line"></i><span>Métricas</span></button>
+    <button class="nav-item" onclick="mudarTela('financeiro')" data-tela="financeiro"><i class="fas fa-coins"></i><span>Financeiro</span></button>
+    <button class="nav-item" onclick="mudarTela('profissional')" data-tela="profissional"><i class="fas fa-id-card"></i><span>CREF</span></button>
 </div>
 
 <script>
 // ==================== DATA MODELS ====================
-let alunos = JSON.parse(localStorage.getItem("gym_alunos")) || [];
-let treinos = JSON.parse(localStorage.getItem("gym_treinos")) || [];
-let metricas = JSON.parse(localStorage.getItem("gym_metricas")) || [];
+let alunos = JSON.parse(localStorage.getItem("gym_alunos_v2")) || [];
+let treinos = JSON.parse(localStorage.getItem("gym_treinos_v2")) || [];
+let metricas = JSON.parse(localStorage.getItem("gym_metricas_v2")) || [];
+let checkins = JSON.parse(localStorage.getItem("gym_checkins_v2")) || [];
+let pagamentos = JSON.parse(localStorage.getItem("gym_pagamentos_v2")) || [];
+let profissional = JSON.parse(localStorage.getItem("gym_profissional")) || { nome: "", cref: "" };
 
-// Gráficos
-let chartAlunosMes = null;
-let chartTreinosDist = null;
-let chartEvolucao = null;
+const precosPlanos = { 30: 120, 90: 320, 365: 1200 };
 
-// ==================== FUNÇÕES AUXILIARES ====================
+let charts = { chartCheckins: null, chartPlanos: null, chartEvolucao: null };
+
 function salvarDados() {
-    localStorage.setItem("gym_alunos", JSON.stringify(alunos));
-    localStorage.setItem("gym_treinos", JSON.stringify(treinos));
-    localStorage.setItem("gym_metricas", JSON.stringify(metricas));
+    localStorage.setItem("gym_alunos_v2", JSON.stringify(alunos));
+    localStorage.setItem("gym_treinos_v2", JSON.stringify(treinos));
+    localStorage.setItem("gym_metricas_v2", JSON.stringify(metricas));
+    localStorage.setItem("gym_checkins_v2", JSON.stringify(checkins));
+    localStorage.setItem("gym_pagamentos_v2", JSON.stringify(pagamentos));
 }
 
-function mudarTela(tela) {
-    document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
-    document.getElementById(`${tela}Section`).classList.add('active');
-    
-    document.querySelectorAll('.nav-item').forEach(btn => btn.classList.remove('active'));
-    document.querySelector(`.nav-item[data-tela="${tela}"]`).classList.add('active');
-    
-    renderizarTudo();
+// ==================== REGRA: Verificar status do aluno ====================
+function getAlunoStatus(aluno) {
+    let hoje = new Date();
+    hoje.setHours(0,0,0,0);
+    let venc = new Date(aluno.vencimento);
+    if (venc < hoje) return "INADIMPLENTE";
+    return "ATIVO";
 }
 
-// ==================== ALUNOS ====================
+function alunoPodeAcessar(aluno) {
+    return getAlunoStatus(aluno) === "ATIVO";
+}
+
+// ==================== ALUNOS COM REGRA DE CPF ÚNICO ====================
 function cadastrarAluno() {
     let nome = document.getElementById("nomeAluno").value.trim();
-    if (!nome) {
-        Swal.fire("Atenção", "Digite o nome do aluno", "warning");
+    let cpf = document.getElementById("cpfAluno").value.trim();
+    let contato = document.getElementById("contatoAluno").value.trim();
+    let planoMeses = parseInt(document.getElementById("planoAluno").value);
+    let pagamentoTipo = document.getElementById("pagamentoTipo").value;
+    
+    if (!nome || !cpf || !contato) {
+        Swal.fire("Atenção", "Preencha nome, CPF e contato", "warning");
+        return;
+    }
+    if (cpf.length !== 11 || isNaN(cpf)) {
+        Swal.fire("CPF Inválido", "Digite apenas 11 números", "error");
         return;
     }
     
-    let dias = parseInt(document.getElementById("planoAluno").value);
+    // REGRA: CPF único
+    if (alunos.some(a => a.cpf === cpf)) {
+        Swal.fire("CPF já cadastrado", "Este CPF já está registrado no sistema", "error");
+        return;
+    }
+    
     let vencimento = new Date();
-    vencimento.setDate(vencimento.getDate() + dias);
+    vencimento.setDate(vencimento.getDate() + planoMeses);
+    let valor = precosPlanos[planoMeses];
     
     let novoAluno = {
         id: Date.now(),
         nome: nome,
+        cpf: cpf,
+        contato: contato,
         vencimento: vencimento.toISOString(),
-        dataCadastro: new Date().toISOString()
+        dataCadastro: new Date().toISOString(),
+        plano: planoMeses,
+        valorMensalidade: valor,
+        status: "ATIVO"
     };
     
     alunos.push(novoAluno);
+    
+    // Registrar pagamento
+    pagamentos.push({
+        id: Date.now(),
+        alunoId: novoAluno.id,
+        alunoNome: nome,
+        valor: valor,
+        tipo: pagamentoTipo,
+        data: new Date().toISOString(),
+        periodo: `${planoMeses} dias`
+    });
+    
     salvarDados();
     document.getElementById("nomeAluno").value = "";
+    document.getElementById("cpfAluno").value = "";
+    document.getElementById("contatoAluno").value = "";
     
-    Swal.fire({
-        icon: 'success',
-        title: 'Aluno Cadastrado!',
-        text: `${nome} - Plano ${dias} dias`,
-        timer: 2000,
-        showConfirmButton: false
-    });
+    Swal.fire("Sucesso!", `${nome} cadastrado com sucesso! Plano ativo até ${vencimento.toLocaleDateString('pt-BR')}`, "success");
     renderizarTudo();
 }
 
 function deletarAluno(id) {
     Swal.fire({
         title: 'Excluir Aluno?',
-        text: 'Todos os treinos e métricas deste aluno também serão removidos!',
+        text: 'Todos os dados relacionados serão removidos!',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#ef4444',
-        confirmButtonText: 'Sim, excluir',
-        cancelButtonText: 'Cancelar'
+        confirmButtonText: 'Sim, excluir'
     }).then((result) => {
         if (result.isConfirmed) {
             alunos = alunos.filter(a => a.id !== id);
             treinos = treinos.filter(t => t.alunoId !== id);
             metricas = metricas.filter(m => m.alunoId !== id);
+            checkins = checkins.filter(c => c.alunoId !== id);
             salvarDados();
-            Swal.fire('Excluído!', 'Aluno removido com sucesso.', 'success');
+            Swal.fire('Excluído!', 'Aluno removido.', 'success');
             renderizarTudo();
+        }
+    });
+}
+
+function renovarPlano(alunoId) {
+    Swal.fire({
+        title: 'Renovar Plano',
+        text: 'Confirme a renovação por mais 30 dias',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Renovar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            let aluno = alunos.find(a => a.id === alunoId);
+            if (aluno) {
+                let novoVenc = new Date(aluno.vencimento);
+                if (novoVenc < new Date()) novoVenc = new Date();
+                novoVenc.setDate(novoVenc.getDate() + 30);
+                aluno.vencimento = novoVenc.toISOString();
+                
+                pagamentos.push({
+                    id: Date.now(),
+                    alunoId: aluno.id,
+                    alunoNome: aluno.nome,
+                    valor: 120,
+                    tipo: "renovacao",
+                    data: new Date().toISOString(),
+                    periodo: "30 dias"
+                });
+                
+                salvarDados();
+                Swal.fire("Renovado!", `Plano de ${aluno.nome} renovado até ${novoVenc.toLocaleDateString('pt-BR')}`, "success");
+                renderizarTudo();
+            }
         }
     });
 }
@@ -565,93 +612,115 @@ function renderizarAlunos() {
     }
     
     container.innerHTML = alunos.map(aluno => {
+        let status = getAlunoStatus(aluno);
         let venc = new Date(aluno.vencimento);
-        let hoje = new Date();
-        let statusClass = venc < hoje ? '⚠️ VENCIDO' : (venc - hoje < 7*24*60*60*1000 ? '⏰ Próximo' : '✅ Ativo');
+        let statusClass = status === "ATIVO" ? "status-ativo" : "status-inadimplente";
+        let statusText = status === "ATIVO" ? "✅ Ativo" : "⚠️ Inadimplente";
+        
         return `
             <div class="list-item">
                 <div class="item-info">
-                    <div class="item-name"><i class="fas fa-user"></i> ${aluno.nome}</div>
-                    <div class="item-detail">📅 Venc: ${venc.toLocaleDateString('pt-BR')} | ${statusClass}</div>
+                    <div class="item-name">
+                        <i class="fas fa-user"></i> ${aluno.nome}
+                        <span class="status-badge ${statusClass}">${statusText}</span>
+                    </div>
+                    <div class="item-detail">📄 CPF: ${aluno.cpf.substring(0,3)}.${aluno.cpf.substring(3,6)}.${aluno.cpf.substring(6,9)}-${aluno.cpf.substring(9)}</div>
+                    <div class="item-detail">📅 Venc: ${venc.toLocaleDateString('pt-BR')}</div>
+                    <div class="item-detail">💰 R$ ${aluno.valorMensalidade.toFixed(2)}</div>
                 </div>
-                <button class="delete-btn" onclick="deletarAluno(${aluno.id})"><i class="fas fa-trash"></i> Excluir</button>
+                <div style="display: flex; gap: 8px;">
+                    ${status === "INADIMPLENTE" ? `<button class="delete-btn" style="background:#f97316;" onclick="renovarPlano(${aluno.id})"><i class="fas fa-sync"></i> Renovar</button>` : ''}
+                    <button class="delete-btn" onclick="deletarAluno(${aluno.id})"><i class="fas fa-trash"></i></button>
+                </div>
             </div>
         `;
     }).join("");
 }
 
-// ==================== ALERTAS ====================
-function gerarAlertas() {
-    let hoje = new Date();
-    hoje.setHours(0, 0, 0, 0);
-    let alertas = [];
+// ==================== CHECK-IN COM REGRA DE ACESSO ====================
+function realizarCheckin() {
+    let nomeAluno = document.getElementById("selectCheckinAluno").value;
+    if (!nomeAluno) { Swal.fire("Erro", "Selecione um aluno", "error"); return; }
+    let aluno = alunos.find(a => a.nome === nomeAluno);
+    if (!aluno) return;
     
-    alunos.forEach(aluno => {
-        let venc = new Date(aluno.vencimento);
-        let diffDias = Math.ceil((venc - hoje) / (1000 * 60 * 60 * 24));
-        
-        if (venc < hoje) {
-            alertas.push({ tipo: 'vencido', nome: aluno.nome, dias: 0 });
-        } else if (diffDias <= 7) {
-            alertas.push({ tipo: 'proximo', nome: aluno.nome, dias: diffDias });
-        }
-    });
-    
-    let container = document.getElementById("alertContainer");
-    if (alertas.length === 0) {
-        container.innerHTML = `<div class="card" style="background: rgba(0,255,136,0.1); text-align:center;">✅ Todos os alunos com plano em dia!</div>`;
+    // REGRA: Verificar se pode acessar
+    if (!alunoPodeAcessar(aluno)) {
+        Swal.fire("Acesso Bloqueado", `Aluno ${aluno.nome} está com plano vencido! Renove para liberar o acesso.`, "error");
         return;
     }
     
-    container.innerHTML = alertas.map(alert => {
-        if (alert.tipo === 'vencido') {
-            return `<div class="alert-card"><i class="fas fa-exclamation-triangle"></i> <strong>⚠️ ${alert.nome}</strong> - Plano VENCIDO! Renove imediatamente.</div>`;
-        } else {
-            return `<div class="alert-card alert-warning"><i class="fas fa-clock"></i> <strong>⏰ ${alert.nome}</strong> - Vence em ${alert.dias} dias! Renove agora.</div>`;
-        }
-    }).join("");
+    // Verificar check-in duplicado no mesmo dia
+    let hoje = new Date().toDateString();
+    let jaCheckinHoje = checkins.some(c => c.alunoId === aluno.id && new Date(c.data).toDateString() === hoje);
+    if (jaCheckinHoje) {
+        Swal.fire("Check-in já realizado", `${aluno.nome} já registrou entrada hoje!`, "info");
+        return;
+    }
+    
+    checkins.push({
+        id: Date.now(),
+        alunoId: aluno.id,
+        alunoNome: aluno.nome,
+        data: new Date().toISOString(),
+        hora: new Date().toLocaleTimeString('pt-BR')
+    });
+    
+    salvarDados();
+    Swal.fire("Check-in realizado!", `${aluno.nome} - Entrada registrada às ${new Date().toLocaleTimeString('pt-BR')}`, "success");
+    renderizarTudo();
+}
+
+function renderizarCheckins() {
+    let hoje = new Date().toDateString();
+    let checkinsHoje = checkins.filter(c => new Date(c.data).toDateString() === hoje);
+    document.getElementById("frequenciaHoje").innerHTML = `📊 Hoje: ${checkinsHoje.length} check-ins realizados`;
+    
+    let ultimos = [...checkins].reverse().slice(0, 5);
+    let container = document.getElementById("ultimosCheckins");
+    if (ultimos.length === 0) {
+        container.innerHTML = `<div class="empty-state"><i class="fas fa-clock"></i><br>Nenhum check-in hoje</div>`;
+    } else {
+        container.innerHTML = ultimos.map(c => `<div class="tip-card">✅ ${c.alunoNome} - ${new Date(c.data).toLocaleTimeString('pt-BR')}</div>`).join("");
+    }
 }
 
 // ==================== TREINOS ====================
 function salvarTreino() {
-    let nomeAluno = document.getElementById("selectAlunoTreino").value;
-    if (!nomeAluno) {
-        Swal.fire("Erro", "Selecione um aluno", "error");
+    if (!profissional.nome || !profissional.cref) {
+        Swal.fire("Atenção", "É necessário registrar um profissional CREF para prescrever treinos!", "warning");
         return;
     }
     
+    let nomeAluno = document.getElementById("selectAlunoTreino").value;
+    if (!nomeAluno) { Swal.fire("Erro", "Selecione um aluno", "error"); return; }
     let aluno = alunos.find(a => a.nome === nomeAluno);
     if (!aluno) return;
     
     let tipo = document.getElementById("tipoTreino").value;
     let desc = document.getElementById("descTreino").value.trim();
+    if (!desc) { Swal.fire("Atenção", "Descreva os exercícios", "info"); return; }
     
-    if (!desc) {
-        Swal.fire("Atenção", "Descreva os exercícios do treino", "info");
-        return;
-    }
-    
-    let novoTreino = {
+    treinos.push({
         id: Date.now(),
         alunoId: aluno.id,
         alunoNome: aluno.nome,
-        tipo: tipo,
+        tipo,
         descricao: desc,
-        data: new Date().toISOString()
-    };
+        data: new Date().toISOString(),
+        profissional: profissional.nome,
+        cref: profissional.cref
+    });
     
-    treinos.push(novoTreino);
     salvarDados();
     document.getElementById("descTreino").value = "";
-    
-    Swal.fire("Treino Salvo!", `Treino ${tipo} atribuído para ${aluno.nome}`, "success");
+    Swal.fire("Treino Salvo!", `Treino ${tipo} prescrito por ${profissional.nome}`, "success");
     renderizarTudo();
 }
 
 function deletarTreino(id) {
     treinos = treinos.filter(t => t.id !== id);
     salvarDados();
-    Swal.fire("Removido!", "Treino excluído com sucesso.", "info");
     renderizarTudo();
 }
 
@@ -661,14 +730,12 @@ function renderizarTreinos() {
         container.innerHTML = `<div class="empty-state"><i class="fas fa-clipboard"></i><br>Nenhum treino registrado</div>`;
         return;
     }
-    
-    let treinosOrdenados = [...treinos].reverse();
-    container.innerHTML = treinosOrdenados.map(t => `
+    container.innerHTML = [...treinos].reverse().map(t => `
         <div class="list-item">
             <div class="item-info">
                 <div class="item-name"><i class="fas fa-dumbbell"></i> ${t.alunoNome} - Treino ${t.tipo}</div>
-                <div class="item-detail">📝 ${t.descricao.substring(0, 50)}${t.descricao.length > 50 ? '...' : ''}</div>
-                <div class="item-detail">📅 ${new Date(t.data).toLocaleDateString('pt-BR')}</div>
+                <div class="item-detail">📝 ${t.descricao.substring(0, 50)}</div>
+                <div class="item-detail">👨‍🏫 Prof: ${t.profissional || 'N/A'} (CREF: ${t.cref || 'N/A'})</div>
             </div>
             <button class="delete-btn" onclick="deletarTreino(${t.id})"><i class="fas fa-trash"></i></button>
         </div>
@@ -678,165 +745,197 @@ function renderizarTreinos() {
 // ==================== MÉTRICAS ====================
 function salvarMetrica() {
     let nomeAluno = document.getElementById("selectAlunoMetrica").value;
-    if (!nomeAluno) {
-        Swal.fire("Erro", "Selecione um aluno", "error");
-        return;
-    }
-    
+    if (!nomeAluno) { Swal.fire("Erro", "Selecione um aluno", "error"); return; }
     let aluno = alunos.find(a => a.nome === nomeAluno);
     if (!aluno) return;
     
     let peso = parseFloat(document.getElementById("pesoAluno").value);
     let altura = parseFloat(document.getElementById("alturaAluno").value);
     let gordura = document.getElementById("gorduraAluno").value;
-    let gorduraVal = gordura ? parseFloat(gordura) : null;
-    
-    if (isNaN(peso) || isNaN(altura)) {
-        Swal.fire("Atenção", "Preencha peso e altura corretamente", "warning");
-        return;
-    }
+    if (isNaN(peso) || isNaN(altura)) { Swal.fire("Atenção", "Preencha peso e altura", "warning"); return; }
     
     let imc = peso / (altura * altura);
-    let classificacao = "";
-    if (imc < 18.5) classificacao = "Abaixo do peso";
-    else if (imc < 25) classificacao = "Peso normal";
-    else if (imc < 30) classificacao = "Sobrepeso";
-    else classificacao = "Obesidade";
+    let classificacao = imc < 18.5 ? "Abaixo do peso" : imc < 25 ? "Peso normal" : imc < 30 ? "Sobrepeso" : "Obesidade";
     
-    let novaMetrica = {
+    metricas.push({
         id: Date.now(),
         alunoId: aluno.id,
         alunoNome: aluno.nome,
-        peso: peso,
-        altura: altura,
-        gordura: gorduraVal,
+        peso, altura,
+        gordura: gordura ? parseFloat(gordura) : null,
         imc: imc.toFixed(1),
-        classificacao: classificacao,
+        classificacao,
         data: new Date().toISOString()
-    };
+    });
     
-    metricas.push(novaMetrica);
     salvarDados();
-    
     document.getElementById("pesoAluno").value = "";
     document.getElementById("alturaAluno").value = "";
     document.getElementById("gorduraAluno").value = "";
+    Swal.fire("Avaliação Salva!", `IMC: ${imc.toFixed(1)} - ${classificacao}`, "success");
+    renderizarTudo();
+}
+
+// ==================== DASHBOARD E GRÁFICOS ====================
+function atualizarDashboard() {
+    let ativos = alunos.filter(a => getAlunoStatus(a) === "ATIVO").length;
+    let inadimplentes = alunos.filter(a => getAlunoStatus(a) === "INADIMPLENTE").length;
     
-    Swal.fire("Métrica Salva!", `IMC: ${imc.toFixed(1)} - ${classificacao}`, "success");
-    renderizarTudo();
-}
-
-function deletarMetrica(id) {
-    metricas = metricas.filter(m => m.id !== id);
-    salvarDados();
-    renderizarTudo();
-}
-
-// ==================== GRÁFICOS ====================
-function atualizarGraficos() {
-    // Gráfico de alunos por mês
-    let meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
-    let contagemMeses = new Array(12).fill(0);
-    alunos.forEach(aluno => {
-        let data = new Date(aluno.dataCadastro || aluno.vencimento);
-        let mes = data.getMonth();
-        contagemMeses[mes]++;
+    document.getElementById("totalAlunos").innerText = alunos.length;
+    document.getElementById("alunosAtivos").innerText = ativos;
+    document.getElementById("inadimplentes").innerText = inadimplentes;
+    
+    let receitaMes = pagamentos.filter(p => {
+        let data = new Date(p.data);
+        let hoje = new Date();
+        return data.getMonth() === hoje.getMonth() && data.getFullYear() === hoje.getFullYear();
+    }).reduce((sum, p) => sum + p.valor, 0);
+    document.getElementById("receitaMes").innerText = `R$ ${receitaMes.toFixed(0)}`;
+    
+    // Gráfico de check-ins por dia da semana
+    let diasSemana = ["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
+    let contagem = new Array(7).fill(0);
+    checkins.forEach(c => {
+        let dia = new Date(c.data).getDay();
+        contagem[dia]++;
     });
-    
-    let ctx1 = document.getElementById("chartAlunosMes").getContext("2d");
-    if (chartAlunosMes) chartAlunosMes.destroy();
-    chartAlunosMes = new Chart(ctx1, {
+    let ctx1 = document.getElementById("chartCheckins").getContext("2d");
+    if (charts.chartCheckins) charts.chartCheckins.destroy();
+    charts.chartCheckins = new Chart(ctx1, {
         type: 'bar',
-        data: { labels: meses, datasets: [{ label: 'Alunos Cadastrados', data: contagemMeses, backgroundColor: '#00ff88', borderRadius: 10 }] },
-        options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { labels: { color: '#fff' } } } }
+        data: { labels: diasSemana, datasets: [{ label: 'Check-ins', data: contagem, backgroundColor: '#00ff88' }] },
+        options: { responsive: true, plugins: { legend: { labels: { color: '#fff' } } } }
     });
     
-    // Gráfico distribuição treinos
-    let countA = treinos.filter(t => t.tipo === 'A').length;
-    let countB = treinos.filter(t => t.tipo === 'B').length;
-    let countC = treinos.filter(t => t.tipo === 'C').length;
-    let ctx2 = document.getElementById("chartTreinosDist").getContext("2d");
-    if (chartTreinosDist) chartTreinosDist.destroy();
-    chartTreinosDist = new Chart(ctx2, {
+    // Gráfico de planos
+    let planosCount = { 30: 0, 90: 0, 365: 0 };
+    alunos.forEach(a => { planosCount[a.plano]++; });
+    let ctx2 = document.getElementById("chartPlanos").getContext("2d");
+    if (charts.chartPlanos) charts.chartPlanos.destroy();
+    charts.chartPlanos = new Chart(ctx2, {
         type: 'doughnut',
-        data: { labels: ['Treino A', 'Treino B', 'Treino C'], datasets: [{ data: [countA, countB, countC], backgroundColor: ['#00ff88', '#3b82f6', '#f97316'] }] },
+        data: { labels: ['Mensal', 'Trimestral', 'Anual'], datasets: [{ data: [planosCount[30], planosCount[90], planosCount[365]], backgroundColor: ['#00ff88', '#3b82f6', '#f97316'] }] },
         options: { responsive: true, plugins: { legend: { labels: { color: '#fff' } } } }
     });
 }
 
 function atualizarGraficoEvolucao() {
-    let select = document.getElementById("selectAlunoMetrica");
-    let nomeSelecionado = select.value;
-    
-    if (!nomeSelecionado || alunos.length === 0) {
-        if (chartEvolucao) chartEvolucao.destroy();
-        document.getElementById("imcInfo").innerHTML = "📊 Selecione um aluno para ver a evolução";
-        return;
-    }
-    
-    let metricasAluno = metricas.filter(m => m.alunoNome === nomeSelecionado).sort((a,b) => new Date(a.data) - new Date(b.data));
-    
+    let nome = document.getElementById("selectAlunoMetrica").value;
+    let metricasAluno = metricas.filter(m => m.alunoNome === nome).sort((a,b) => new Date(a.data) - new Date(b.data));
     if (metricasAluno.length === 0) {
-        if (chartEvolucao) chartEvolucao.destroy();
-        document.getElementById("imcInfo").innerHTML = "📉 Nenhuma avaliação registrada para este aluno";
+        if (charts.chartEvolucao) charts.chartEvolucao.destroy();
+        document.getElementById("imcInfo").innerHTML = "📊 Selecione um aluno para ver evolução";
         return;
     }
-    
-    let labels = metricasAluno.map(m => new Date(m.data).toLocaleDateString('pt-BR'));
-    let pesos = metricasAluno.map(m => m.peso);
-    
     let ctx = document.getElementById("graficoEvolucao").getContext("2d");
-    if (chartEvolucao) chartEvolucao.destroy();
-    chartEvolucao = new Chart(ctx, {
+    if (charts.chartEvolucao) charts.chartEvolucao.destroy();
+    charts.chartEvolucao = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: labels,
-            datasets: [{ label: 'Peso (kg)', data: pesos, borderColor: '#00ff88', backgroundColor: 'rgba(0,255,136,0.1)', fill: true, tension: 0.3, pointBackgroundColor: '#00ff88' }]
+            labels: metricasAluno.map(m => new Date(m.data).toLocaleDateString('pt-BR')),
+            datasets: [{ label: 'Peso (kg)', data: metricasAluno.map(m => m.peso), borderColor: '#00ff88', tension: 0.3 }]
         },
-        options: { responsive: true, plugins: { tooltip: { callbacks: { label: (ctx) => `${ctx.raw} kg` } } } }
+        options: { responsive: true }
     });
+    let ultima = metricasAluno[metricasAluno.length-1];
+    document.getElementById("imcInfo").innerHTML = `📊 IMC: ${ultima.imc} - ${ultima.classificacao} | Peso: ${ultima.peso}kg`;
+}
+
+// ==================== FINANCEIRO ====================
+function gerarRelatorioFinanceiro() {
+    let hoje = new Date();
+    let mesAtual = pagamentos.filter(p => {
+        let data = new Date(p.data);
+        return data.getMonth() === hoje.getMonth() && data.getFullYear() === hoje.getFullYear();
+    });
+    let totalMes = mesAtual.reduce((s, p) => s + p.valor, 0);
     
-    let ultima = metricasAluno[metricasAluno.length - 1];
-    document.getElementById("imcInfo").innerHTML = `
-        <strong>📊 Última Avaliação</strong><br>
-        IMC: ${ultima.imc} - ${ultima.classificacao}<br>
-        Peso: ${ultima.peso}kg | Data: ${new Date(ultima.data).toLocaleDateString('pt-BR')}
+    let porTipo = { dinheiro: 0, cartao: 0, pix: 0, renovacao: 0 };
+    pagamentos.forEach(p => { if (porTipo[p.tipo] !== undefined) porTipo[p.tipo] += p.valor; });
+    
+    document.getElementById("relatorioFinanceiro").innerHTML = `
+        <div class="financial-row"><strong>💰 Receita Mensal:</strong> <span style="color:#00ff88">R$ ${totalMes.toFixed(2)}</span></div>
+        <div class="financial-row"><span>💵 Dinheiro:</span> R$ ${porTipo.dinheiro.toFixed(2)}</div>
+        <div class="financial-row"><span>💳 Cartão:</span> R$ ${porTipo.cartao.toFixed(2)}</div>
+        <div class="financial-row"><span>📱 Pix:</span> R$ ${porTipo.pix.toFixed(2)}</div>
+        <div class="financial-row"><span>🔄 Renovações:</span> R$ ${porTipo.renovacao.toFixed(2)}</div>
     `;
-}
-
-// ==================== DASHBOARD ====================
-function atualizarDashboard() {
-    document.getElementById("totalAlunos").innerText = alunos.length;
-    document.getElementById("totalTreinos").innerText = treinos.length;
-    document.getElementById("totalMetricas").innerText = metricas.length;
     
-    let imcs = metricas.map(m => parseFloat(m.imc)).filter(i => !isNaN(i));
-    let mediaImc = imcs.length ? (imcs.reduce((a,b) => a+b, 0) / imcs.length).toFixed(1) : 0;
-    document.getElementById("mediaIMC").innerText = mediaImc;
+    let historicoHtml = [...pagamentos].reverse().slice(0, 10).map(p => `
+        <div class="financial-row"><span>${new Date(p.data).toLocaleDateString('pt-BR')}</span><span>${p.alunoNome}</span><span style="color:#00ff88">R$ ${p.valor.toFixed(2)}</span><span>${p.tipo}</span></div>
+    `).join("");
+    document.getElementById("historicoPagamentos").innerHTML = historicoHtml || "<div class='empty-state'>Nenhum pagamento registrado</div>";
 }
 
-// ==================== RENDERIZAÇÃO GERAL ====================
+// ==================== PROFISSIONAL CREF ====================
+function salvarProfissional() {
+    let nome = document.getElementById("profissionalNome").value.trim();
+    let cref = document.getElementById("profissionalCref").value.trim();
+    if (!nome || !cref) {
+        Swal.fire("Atenção", "Preencha nome e número do CREF", "warning");
+        return;
+    }
+    profissional = { nome, cref };
+    localStorage.setItem("gym_profissional", JSON.stringify(profissional));
+    document.getElementById("infoProfissional").innerHTML = `<i class="fas fa-check-circle" style="color:#00ff88"></i> Responsável: ${nome} (CREF: ${cref})`;
+    Swal.fire("Registrado!", `Responsável técnico ${nome} registrado com sucesso!`, "success");
+}
+
+function carregarProfissional() {
+    if (profissional.nome) {
+        document.getElementById("infoProfissional").innerHTML = `<i class="fas fa-check-circle" style="color:#00ff88"></i> Responsável: ${profissional.nome} (CREF: ${profissional.cref})`;
+        document.getElementById("profissionalNome").value = profissional.nome;
+        document.getElementById("profissionalCref").value = profissional.cref;
+    }
+}
+
+// ==================== ALERTAS ====================
+function gerarAlertas() {
+    let hoje = new Date();
+    hoje.setHours(0,0,0,0);
+    let alertas = [];
+    alunos.forEach(aluno => {
+        let venc = new Date(aluno.vencimento);
+        let diff = Math.ceil((venc - hoje) / 86400000);
+        if (venc < hoje) alertas.push({ tipo: 'vencido', nome: aluno.nome });
+        else if (diff <= 7) alertas.push({ tipo: 'proximo', nome: aluno.nome, dias: diff });
+    });
+    let container = document.getElementById("alertContainer");
+    if (alertas.length === 0) { container.innerHTML = `<div class="card" style="background:rgba(0,255,136,0.1);text-align:center;">✅ Todos os planos em dia!</div>`; return; }
+    container.innerHTML = alertas.map(a => a.tipo === 'vencido' ? `<div class="alert-card"><i class="fas fa-exclamation-triangle"></i> ⚠️ ${a.nome} - Plano VENCIDO! Acesso bloqueado.</div>` : `<div class="alert-card alert-warning"><i class="fas fa-clock"></i> ⏰ ${a.nome} - Vence em ${a.dias} dias!</div>`).join("");
+}
+
+// ==================== RENDER GERAL ====================
 function renderizarSelects() {
-    let options = alunos.map(a => `<option value="${a.nome}">${a.nome}</option>`).join("");
-    document.getElementById("selectAlunoTreino").innerHTML = options || "<option>Nenhum aluno</option>";
-    document.getElementById("selectAlunoMetrica").innerHTML = options || "<option>Nenhum aluno</option>";
+    let opts = alunos.map(a => `<option value="${a.nome}">${a.nome} (${getAlunoStatus(a) === "ATIVO" ? "✅" : "🔴"})</option>`).join("");
+    document.getElementById("selectAlunoTreino").innerHTML = opts || "<option>Nenhum aluno</option>";
+    document.getElementById("selectAlunoMetrica").innerHTML = opts || "<option>Nenhum aluno</option>";
+    document.getElementById("selectCheckinAluno").innerHTML = opts || "<option>Nenhum aluno</option>";
+}
+
+function mudarTela(tela) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById(`${tela}Section`).classList.add('active');
+    document.querySelectorAll('.nav-item').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.nav-item[data-tela="${tela}"]`).classList.add('active');
+    if (tela === 'financeiro') gerarRelatorioFinanceiro();
+    renderizarTudo();
 }
 
 function renderizarTudo() {
     renderizarAlunos();
     renderizarTreinos();
     renderizarSelects();
+    renderizarCheckins();
     atualizarDashboard();
-    atualizarGraficos();
     atualizarGraficoEvolucao();
     gerarAlertas();
 }
 
-// Inicialização
-renderizarTudo();
-
-// Event listener para mudança de aluno no gráfico
 document.getElementById("selectAlunoMetrica")?.addEventListener("change", () => atualizarGraficoEvolucao());
+carregarProfissional();
+renderizarTudo();
+gerarRelatorioFinanceiro();
 </script>
 </body>
 </html>
